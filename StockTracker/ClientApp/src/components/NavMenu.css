@@ -4,13 +4,20 @@
   word-break: break-all;
 }
 
+h1
+{
+    color: gray
+}
+
 html {
+  text-align: center;
   font-size: 14px;
 }
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        text-align: center;
+        font-size: 16px;
+    }
 }
 
 .box-shadow {

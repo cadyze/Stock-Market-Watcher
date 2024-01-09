@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Layout } from './Layout';
 import ApexCandleStick from "./ApexCandleStick";
+import styles from "./StockData.css"
 
 export function CurrentStockData() {
     const [loading, setLoading] = useState(true);
@@ -98,8 +99,8 @@ export function CurrentStockData() {
     return (
         <>
             {contents}
-            <button onClick={() => onStockRequest()}>Get new stock data</button>
-            <input id="ticker-input" value={ticker} onChange={e => setTicker(e.target.value)}></input>
+            <button onClick={() => onStockRequest()}>Get monthly stock data</button>
+            <input id="ticker-input" width="500" value={ticker} onChange={e => setTicker(e.target.value)}></input>
         </>
     );
 }

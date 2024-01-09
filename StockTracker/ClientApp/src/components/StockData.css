@@ -1,0 +1,19 @@
+﻿body {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    font-family: alte-haas-grotesk
+}
+
+@font-face {
+    font-family: "alte-haas-grotesk";
+    src: local("alte-haas-grotesk"), url("../Fonts/alte_haas_grotesk/AlteHaasGroteskRegular.ttf") format('truetype');
+}
+
+button {
+    font-family: alte-haas-grotesk;
+}
+
+div {
+    background-color: #CBCBC8
+}

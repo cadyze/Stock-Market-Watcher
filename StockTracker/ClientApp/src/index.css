@@ -1,0 +1,7 @@
+﻿body {
+}
+
+@font-face {
+    font-family: "alte-haas-grotesk";
+    src: local("alte-haas-grotesk"), url(./Fonts/alte_haas_grotesk/AlteHaasGroteskRegular.ttf) format('truetype');
+}
