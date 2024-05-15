@@ -12,23 +12,8 @@ export function CurrentStockData() {
 
     const isInvalidStock = useRef(true)
 
-
-    ////Returns if the stock is valid or not
-    //async function checkIfValidStock(stockData) {
-    //    stockData.json().then(async value => {
-    //        console.log(value)
-    //        await setStock(value)
-    //        console.log("MME")
-    //        console.log("So this is updated? = " + stock);
-    //        return (stock !== undefined && stock.results !== null);
-    //    });
-
-    //}
-
     const onStockRequest = async () => {
-        //console.log("BRUHV");
         setLoading(true)
-        //console.log("BRUHV");
         //API call to get the stock data based on the ticker input
         const resp = await fetch("api/baraggregate/ticker/" + ticker)
 
@@ -36,17 +21,12 @@ export function CurrentStockData() {
         await resp.json().then(async value => {
             console.log(value)
             await setStock(value)
-            //console.log("MME")
-            //console.log("So this is updated? = " + stock);
 
             //Check if the input is valid, otherwise return error
             isInvalidStock.current = (value === undefined || value.results == null);
-            //console.log((stock === undefined || stock.results c== null) + " Just set invalid: " + isInvalidStock.current)
         });
 
         //Check if the input is valid, otherwise return error
-        //console.log("response", stock);
-        //console.log("stupid mf", stock.ticker);
         await setLoading(false);
     };
 
@@ -93,7 +73,6 @@ export function CurrentStockData() {
             setContents(value)
         })
     }, [loading])
-    //useEffect(() => { updateContents() }, [stock])
 
 
     return (
